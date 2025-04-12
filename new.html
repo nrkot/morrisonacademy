@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+  <script src="c:\Users\Пользователь\Desktop\html\static\script.js"></script>
+  <link rel="stylesheet" href="c:\Users\Пользователь\Desktop\html\static\style2.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  
+  <link rel="shortcut icon" href="c:\Users\Пользователь\Desktop\html\static\img\Logo\favicon-transparent.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+  <img src="static/img/Logo/favicon.ico" alt="Logo" class="logo">
+
+  <header>
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <span>🔥data base • 🔥backend • 🔥 frontend• 🔥• Ai   🔥data base • 🔥backend • 🔥 frontend• 🔥• Ai  🔥backend • 🔥 frontend• 🔥• Ai  </span>
+        <span>🔥data base • 🔥backend • 🔥 frontend• 🔥• Ai  🔥data base • 🔥backend • 🔥 frontend• 🔥• Ai  </span>
+      </div>
+    </div>
+    
+    <h1>lix studio</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" >Home</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="welcome">
+    
+    <div class="welcome-text">
+      <h3>This is my portfolio</h3>
+      <p>On this page you can find my projects, my skills, contact details and other info</p>
+    </div>
+    <img class="welcome-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Zx2e0z5C1uTpC7U1QIfkQpC4h8rFIedzgsHbRXiBpXP9qNctPvPObwQaTI0BA_iw4RM&usqp=CAU" alt="Portfolio Image">
+    <br><br>
+    <button class="button">Learn More</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m a web developer passionate about front-end and back-end technologies. I create responsive and functional websites, and I’m always learning new tools and frameworks.</p>
+  </section>
+  <section id="stats" class="stats">
+   <h1>My career</h1>
+    <div class="container">
+        <div class="stat">
+            <h2 class="counter" data-target="80">0</h2>
+            <p>Satisfied clients</p>
+        </div>
+        <div class="stat">
+            <h2 class="counter" data-target="200">0</h2>
+            <p>Projects completed</p>
+        </div>
+        <div class="stat">
+            <h2 class="counter" data-target="99">0</h2>
+            <p>Reviews given</p>
+        </div>
+    </div>
+</section>
+<section id="projects" class="projects">
+
+
+  <div class="overlay">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Project 1</h3>
+        <p>This website is about quantum physics, with simulations of quantum mechanics.</p>
+        <a href="https://alidlnrko.github.io/world-of-particle/#">quantum-physics</a>
+      </div>
+      <div class="project-item">
+        <h3>Project 2</h3>
+        <p>Short description of the project.</p>
+        <a href="#">Coming soon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <img src="https://www.springboard.com/blog/wp-content/uploads/2021/10/Full-Stack-Developer-Skills-1.png" alt="">
+    <ul>
+      <li>HTML / CSS / JS</li>
+      <li>Python / Flask</li>
+      <li>SQL / SQLite</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+  <section class="stats-section" id="stats">
+    <div class="stats-content">
+      <div class="stat">
+        <h2 class="counter" data-target="80">0</h2>
+        <p>My career</p>
+      </div>
+      <div class="stat">
+        <h2 class="counter" data-target="200">0</h2>
+        <p>Satisfied clients</p>
+      </div>
+      <div class="stat">
+        <h2 class="counter" data-target="99">0</h2>
+        <p>Projects completed</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="whatsapp-wrapper">
+    <div class="whatsapp-tooltip">write!</div>
+    <a href="https://wa.me/77001234567" target="_blank" class="whatsapp-icon">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
+  
+
+  </section>
+  <div class="form-container">
+    <h2>Contact-form</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email  " placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button class="glow-button" type="submit">Send</button>
+    </form>
+  </div>
+ 
+
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+    
+  </footer>
+
+</body>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let statsStarted = false;
+
+  function startCounting() {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  }
+
+  function handleScroll() {
+    const statsSection = document.getElementById('stats');
+    const sectionTop = statsSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (sectionTop < screenPosition && !statsStarted) {
+      startCounting();
+      statsStarted = true;
+    }
+  }
+  const header = document.querySelector('.site-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  window.addEventListener('scroll', handleScroll);
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".welcome", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  scrollTrigger: {
+    trigger: ".welcome",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+gsap.from(".project-item", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".projects",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+gsap.from(".skills", {
+  opacity: 0,
+  scale: 0.8,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".skills",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  }
+});
+
+gsap.from("footer", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  scrollTrigger: {
+    trigger: "footer",
+    start: "top 90%",
+    toggleActions: "play none none none"
+  }
+});
+const marquee = document.querySelector('.marquee');
+
+gsap.to(marquee, {
+  xPercent: -50, 
+  repeat: -1,
+  duration: 20,
+  ease: "linear"
+});
+
+window.addEventListener('load', () => {
+    gsap.to(".whatsapp-wrapper", {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      pointerEvents: "auto",
+      ease: "power3.out",
+      delay: 1,
+    });
+  });
+</script>
+
+
+</html>
